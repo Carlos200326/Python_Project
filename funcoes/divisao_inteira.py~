@@ -1,0 +1,12 @@
+def divisao_inteira(a,b):
+
+    return a//b
+
+print(divisao_inteira(3,2))
+print(divisao_inteira(3,3))
+print(divisao_inteira(9,18))
+print(divisao_inteira(10,5))
+print(divisao_inteira(8,2))
+print(divisao_inteira(15,3))
+print(divisao_inteira(8,1))
+print(divisao_inteira(36,4))

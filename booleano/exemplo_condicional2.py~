@@ -1,0 +1,62 @@
+def situacaoAluno(p1,p2):
+
+
+    '''
+    Calcula a media de um aluno atraves 
+    das notas p1 e da p2 e retorna a situacao
+    do aluno:
+
+    1 - Passou direto
+    2 - Prova Final
+    3 - Reprovado
+
+    A funcao deve receber valores entre 0
+    e 10 e do tipo inteiro ou float
+    Valor de retorno -1: tipo invalido
+    Valor de retorno -2: nota menor do que 0 ou
+    maior do que 10.
+
+    '''
+
+    if(type(p1) != float and type(p1) != int):
+
+        return -1
+
+    if(type(p2) != float and type(p2) != int):
+
+        return -1
+
+    media_parcial = (p1+p2)/2
+
+    if(p1<0 or p1> 10):
+
+        return -2
+
+    if(p2<0 or p2>10):
+
+        return -2
+
+    if(media_parcial >= 7.0):
+
+        situacao = 1
+
+    elif(3.0<=media_parcial<7):
+
+        situacao = 2
+
+    else:
+
+        situacao = 3
+
+    return situacao
+
+
+print(situacaoAluno(10,8))
+print(situacaoAluno(6,7))
+print(situacaoAluno(3,5.5))
+print(situacaoAluno(2.5,2.9))
+print(situacaoAluno(8,"ok"))
+print(situacaoAluno(9,-2))
+print(situacaoAluno(True,10))
+print(situacaoAluno([10,687],{749,90}))
+

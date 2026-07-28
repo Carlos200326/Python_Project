@@ -1,0 +1,9 @@
+def valor_absoluto(a,b):
+
+    sub = a - b
+
+    if(sub<0):
+
+        sub = sub * (-1)
+
+    return sub

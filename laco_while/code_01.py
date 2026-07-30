@@ -28,8 +28,55 @@ def somatorio_impares(num1, num2):
 
     return soma
 
-print(somatorio_impares(-2,-4))
-print(somatorio_impares(2,6))
-print(somatorio_impares(0,7))
-print(somatorio_impares(1,1))
+print("========Versao 1 da funcao somatorio_impares=========")
 print(somatorio_impares(2,2))
+print(somatorio_impares(1,4))
+print(somatorio_impares(3,3))
+print(somatorio_impares(7,1))
+print(somatorio_impares(-4,-2))
+print(somatorio_impares(-6,-6))
+print(somatorio_impares(-3,-3))
+print(somatorio_impares(0,0))
+print(somatorio_impares(-2,-4))
+
+
+def somatorio_impares2(num1,num2):
+
+    if(num1>num2):
+
+        aux = num1
+        num1 = num2
+        num2 = aux
+    
+    if(num1%2 == 0):
+        
+        if(num1 + 1 <= num2):
+            
+            num1 = num1 + 1
+
+        if(num1 == num2):
+
+            return 0
+
+    soma = 0
+    
+    while(num1<=num2):
+
+        """interrupcao de laco de interacao while ocorre quando num1 eh maior do que num2 
+          => condicao de parada"""  
+        
+        soma = soma + num1
+
+        num1=num1 + 2
+
+    return soma
+print("========Versao 2 da funcao somatorio_impares=========")
+print(somatorio_impares2(2,2))
+print(somatorio_impares2(1,4))
+print(somatorio_impares2(3,3))
+print(somatorio_impares2(7,1))
+print(somatorio_impares2(-4,-2))
+print(somatorio_impares2(-6,-6))
+print(somatorio_impares2(-3,-3))
+print(somatorio_impares2(0,0))
+print(somatorio_impares2(-2,-4))

@@ -80,3 +80,44 @@ print(somatorio_impares2(-6,-6))
 print(somatorio_impares2(-3,-3))
 print(somatorio_impares2(0,0))
 print(somatorio_impares2(-2,-4))
+
+
+"""Implementado uma terceira versao que mantenha a clausula if dentro do operador while, mas
+sem ter que passar por todos os valores entre num1 e num2
+
+"""
+
+def somatorio_impares3(num1,num2):
+
+    if(num1> num2):
+
+        aux = num1
+        num1 = num2
+        num2 = aux
+
+    soma = 0
+    if(num1%2==0):
+
+        num1= num1 + 1 #Transforma num1 em numero impar se ele anteriormente ele era par
+
+    while(num1<=num2):
+
+        if(num1%2):
+
+            soma = soma + num1
+            num1 = num1 + 2
+    
+    return soma
+
+print("========Versao 3 da funcao somatorio_impares=========")
+print(somatorio_impares3(2,2))
+print(somatorio_impares3(1,4))
+print(somatorio_impares3(3,3))
+print(somatorio_impares3(7,1))
+print(somatorio_impares3(-4,-2))
+print(somatorio_impares3(-6,-6))
+print(somatorio_impares3(-3,-3))
+print(somatorio_impares3(0,0))
+print(somatorio_impares3(-2,-4))
+
+

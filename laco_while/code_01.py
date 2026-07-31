@@ -38,7 +38,7 @@ print(somatorio_impares(-6,-6))
 print(somatorio_impares(-3,-3))
 print(somatorio_impares(0,0))
 print(somatorio_impares(-2,-4))
-
+print(somatorio_impares(2,5))
 
 def somatorio_impares2(num1,num2):
 
@@ -80,7 +80,7 @@ print(somatorio_impares2(-6,-6))
 print(somatorio_impares2(-3,-3))
 print(somatorio_impares2(0,0))
 print(somatorio_impares2(-2,-4))
-
+print(somatorio_impares2(2,5))
 
 """Implementado uma terceira versao que mantenha a clausula if dentro do operador while, mas
 sem ter que passar por todos os valores entre num1 e num2
@@ -119,5 +119,5 @@ print(somatorio_impares3(-6,-6))
 print(somatorio_impares3(-3,-3))
 print(somatorio_impares3(0,0))
 print(somatorio_impares3(-2,-4))
-
+print(somatorio_impares3(2,5))
 

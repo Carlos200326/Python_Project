@@ -1,10 +1,4 @@
 def somatorio_pares(num1,num2):
-    """
-    Definimos uma funcao que soma todos os pares entre dois numeros quaisquer usando o laco
-    de repeticao while.
-
-    """
-
 
     if(num1>num2):
 

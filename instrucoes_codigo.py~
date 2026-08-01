@@ -1,0 +1,11 @@
+Para importar funcoes em python de arquivos, usar:
+
+from "nome do arquivo sem extensao" import "nome da funcao"
+
+Para importar todos o conteúdo de funcoes de um codigo:
+
+import "nome do arquivo sem extensao"
+
+Para usar uma funcao, apos fazer o passo acima:
+
+"nome da funcao"."nome do arquivo sem extensao" 

@@ -1,0 +1,53 @@
+def somatorioCompostos(num1, num2):
+
+    """
+        Aqui definimos uma funcao que recebe valores positivos inteiros nao nulos e retorna a soma de todos
+        os numeros compostos entre os dois numeros.
+
+    """
+    if(num1>num2):
+
+        aux = num2
+        num2 = num1
+        num1 = aux
+    
+    if (num1 <= 0):
+
+        return -1
+
+    soma = 0
+
+    contagem_divisores = 0
+    divisor = 1
+
+    while(num1<=num2):
+
+        while(divisor<=num1):
+
+            if(num1 % divisor ==0):
+                contagem_divisores = contagem_divisores + 1
+    
+            divisor= divisor + 1
+
+        if(contagem_divisores > 2):
+            #Entao o numero eh composto e deve ser incluido na soma
+            soma = soma + num1
+
+        """Entao para verificarmos se os proximos numeros sao compostos,
+        resetamos as variaveis divisor e contagem_divisores para a proxima interacao que realiza a verificacao,
+        isto eh, colocamos os valores identicos ao inicio da primeira interacao
+        
+        """
+        num1 = num1 + 1
+        divisor = 1 #Comecamos do menor divisor comum de todo numero inteiro positivo
+        contagem_divisores = 0 #Estaremos contando os divisores do proximo numero
+
+    return soma
+
+print(somatorioCompostos(1,9))
+print(somatorioCompostos(0,1))
+print(somatorioCompostos(2,5))
+print(somatorioCompostos(1,6))
+print(somatorioCompostos(-3,-7))
+print(somatorioCompostos(0,10))
+print(somatorioCompostos(15,20))
